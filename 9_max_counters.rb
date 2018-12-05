@@ -29,3 +29,35 @@ def solution(n, a)
 
   counters
 end
+
+# If you're looking for a slightly faster but a much more
+# unreadable version of this solution, that ends up passing
+# the remaining 2 performance tests, then its this one here:
+#
+# def solution(n, a)
+#   counters = Array.new(n, 0)
+#   max_counter = 0
+#   current_max = 0
+
+#   a.each do |ins|
+#     if ins > n
+#       max_counter = current_max
+#     else
+#       if max_counter > counters[ins - 1]
+#         counters[ins - 1] = max_counter + 1
+#       else
+#         counters[ins - 1] += 1
+#       end
+
+#       if current_max < counters[ins - 1]
+#         current_max = counters[ins - 1]
+#       end
+#     end
+#   end
+
+#   counters.map! do |count|
+#     count < max_counter ? max_counter : count
+#   end
+
+#   counters
+# end
