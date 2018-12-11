@@ -4,6 +4,9 @@
 
 # that, given an array H of N positive integers specifying the height of the wall, returns the minimum number of blocks needed to build it.
 
+# Note: There are shorter solutions out there that do things like stack.empty? or stack[], but I don't think that's right.
+# Stack should only be accessed as .push and .pop. Which is why this solution is slight more verbose.
+
 BLOCK_STACK = []
 
 def solution(h)
