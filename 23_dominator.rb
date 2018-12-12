@@ -12,7 +12,7 @@ def solution(a)
     candidates.push([num, i])
 
     if candidates.size > 1
-      2.times {candidates.pop} if candidates[-1][0] != candidates[-2][0]
+      candidates.pop(2) if candidates[-1][0] != candidates[-2][0]
     end
   end
 
