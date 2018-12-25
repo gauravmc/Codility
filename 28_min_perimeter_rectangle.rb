@@ -8,17 +8,15 @@
 
 def solution(n)
   lowest_p = nil
-
   a = 1
+
   while a * a <= n
     if n % a == 0
       b = n / a
       current_p = 2 * (a + b)
-  
+
       if !lowest_p || current_p < lowest_p
         lowest_p = current_p
-      elsif current_p > lowest_p
-        break
       end
     end
 
